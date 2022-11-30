@@ -1,5 +1,7 @@
+import "./body.css";
+
 const Body = () => {
-  <div> body </div>;
+  return <div className="body"> content here </div>;
 };
 
 export default Body;

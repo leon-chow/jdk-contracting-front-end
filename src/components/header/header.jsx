@@ -1,5 +1,7 @@
+import "./header.css";
+
 const Header = () => {
-  <div> 123 </div>;
+  return <div className="header">Welcome to JDK Contracting!</div>;
 };
 
 export default Header;
