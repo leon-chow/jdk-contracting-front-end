@@ -1,3 +1,5 @@
+import "./Sidebar.css";
+
 export const Sidebar = () => {
-  <div> Sidebar </div>;
+  <div className="sidebar"> Sidebar </div>;
 };

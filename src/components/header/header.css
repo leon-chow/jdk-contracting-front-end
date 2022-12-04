@@ -3,7 +3,28 @@
     border-bottom: 1px solid gray;
     box-shadow: 1px 2px #888888;
     padding: 10px;
+    height: 40px;
     top: 0%;
-    margin-bottom: 10px;
     background: linear-gradient(orange, yellow);
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.menu {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.MuiSvgIcon-root {
+    height: 48px;
+    width: 48px;
 }
