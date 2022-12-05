@@ -1,12 +1,13 @@
 import "./body.css";
 import Hero from "./hero/hero";
 import ImageCarousel from "./imagecarousel/imagecarousel";
+import About from "./about/about";
 
 const Body = () => {
   return (
     <div className="body">
       <Hero />
-      Check out my latest works!
+      <About />
       <ImageCarousel />
     </div>
   );

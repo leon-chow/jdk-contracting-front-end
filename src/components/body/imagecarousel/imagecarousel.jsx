@@ -1,7 +1,7 @@
 import "./imagecarousel.css";
 
 const ImageCarousel = () => {
-  return <div>Image Carousel!</div>;
+  return <div className="image-carousel">image carousel here</div>;
 };
 
 export default ImageCarousel;

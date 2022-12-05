@@ -1,0 +1,19 @@
+.image-carousel {
+    overflow: hidden;
+    width: 80%;
+    height: 500px;
+}
+
+.inner {
+    white-space: nowrap;
+    transition: transform 0.3s;
+}
+
+.carousel-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    background-color: green;
+    color: #fff;
+}

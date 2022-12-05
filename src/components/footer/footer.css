@@ -4,7 +4,8 @@
     width: 100%;
     padding: 5px;
     margin-top: 5px;
-    border-top: 1px solid black;
     box-shadow: 0 0px 5px #888888;
-    background: linear-gradient(orange, yellow);
+    background: linear-gradient(turquoise, darkblue);
+    color: white;
+    z-index: 1;
 }
