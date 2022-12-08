@@ -1,7 +1,11 @@
 .image-carousel {
     overflow: hidden;
-    width: 80%;
-    height: 500px;
+    width: 50%;
+    
+    height: 400px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
 }
 
 .inner {
@@ -10,10 +14,34 @@
 }
 
 .carousel-item {
+    position: relative;
     display: inline-flex;
+    object-fit: cover;
     align-items: center;
     justify-content: center;
-    height: 200px;
     background-color: green;
     color: #fff;
+    height: 100%;
+    width: 100%;
+}
+
+.arrow {
+    position: absolute;
+    border: 1px solid white;
+    border-width: 0 3px 3px 0;
+    
+    display: inline-block;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    right: 25%;
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
 }
