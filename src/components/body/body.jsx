@@ -2,6 +2,7 @@ import "./body.css";
 import Hero from "./hero/hero";
 import ImageCarousel from "./imagecarousel/imagecarousel";
 import About from "./about/about";
+import ImageGallery from "./imagegallery/imagegallery";
 
 const Body = () => {
   return (
@@ -9,6 +10,7 @@ const Body = () => {
       <Hero />
       <About />
       <ImageCarousel />
+      <ImageGallery />
     </div>
   );
 };
