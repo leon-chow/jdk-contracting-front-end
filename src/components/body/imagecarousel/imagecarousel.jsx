@@ -7,7 +7,7 @@ import image4 from "../../../assets/KITCHEN_4.jpg";
 import image5 from "../../../assets/BATHROOM_1.jpg";
 import image6 from "../../../assets/BATHROOM_2.jpg";
 
-const images = [image1, image2, image3, image4, image5];
+const images = [image1, image2, image3, image4, image5, image6];
 
 const CarouselComponents = (carouselIndex) =>
   images.map((image) => {
@@ -43,7 +43,6 @@ const ImageCarousel = () => {
           )
         }
       ></span>
-      <div className="center"> index: {carouselIndex} </div>
     </div>
   );
 };
