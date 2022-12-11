@@ -2,27 +2,27 @@
     overflow: hidden;
     width: 50%;
     
-    height: 400px;
+    height: 500px;
     border: 1px solid black;
     display: flex;
     align-items: center;
 }
 
-.inner {
-    white-space: nowrap;
-    transition: transform 0.3s;
+.center {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(50%, 50%);
 }
-
 .carousel-item {
+    white-space: nowrap;
     position: relative;
     display: inline-flex;
     object-fit: cover;
-    align-items: center;
-    justify-content: center;
     background-color: green;
     color: #fff;
-    height: 100%;
     width: 100%;
+    height: auto;
 }
 
 .arrow {
