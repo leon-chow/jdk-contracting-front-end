@@ -6,13 +6,11 @@
 }
 
 .content {
+    margin: 10px;
     width: 50%;
+    font-size: 16px;
 }
 
 h1 {
-    margin: 10px;
-}
-
-p {
     margin: 10px;
 }

@@ -9,7 +9,7 @@ const About = () => {
         as kitchen removals and installations, bathroom removals and
         installations, flooring removals and installations, backsplash removals
         and installations! Please feel free to contact us and we’ll come by to
-        give you a FREE site quote!
+        give you a <b> FREE </b> site quote!
       </p>
     </div>
   );

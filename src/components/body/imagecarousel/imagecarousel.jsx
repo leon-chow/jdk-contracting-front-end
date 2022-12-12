@@ -22,27 +22,46 @@ const CarouselComponents = (carouselIndex) =>
     );
   });
 
+const navigationDots = (carouselIndex, setCarouselIndex) =>
+  images.map((image, index) => {
+    return (
+      <span
+        key={image}
+        className="dot"
+        style={{
+          backgroundColor: carouselIndex === index ? "#717171" : "#bbb",
+        }}
+        onClick={() => setCarouselIndex(index)}
+      />
+    );
+  });
+
 const ImageCarousel = () => {
   const [carouselIndex, setCarouselIndex] = useState(0);
   return (
-    <div className="image-carousel">
-      {CarouselComponents(carouselIndex)}
-      <span
-        onClick={() =>
-          setCarouselIndex((prevState) =>
-            prevState === 0 ? images.length - 1 : (prevState -= 1)
-          )
-        }
-        className="arrow left"
-      ></span>
-      <span
-        className="arrow right"
-        onClick={() =>
-          setCarouselIndex((prevState) =>
-            prevState === images.length - 1 ? 0 : (prevState += 1)
-          )
-        }
-      ></span>
+    <div className="carousel-container">
+      <div className="image-carousel">
+        {CarouselComponents(carouselIndex)}
+        <span
+          onClick={() =>
+            setCarouselIndex((prevState) =>
+              prevState === 0 ? images.length - 1 : (prevState -= 1)
+            )
+          }
+          className="arrow left"
+        ></span>
+        <span
+          className="arrow right"
+          onClick={() =>
+            setCarouselIndex((prevState) =>
+              prevState === images.length - 1 ? 0 : (prevState += 1)
+            )
+          }
+        ></span>
+      </div>
+      <span className="carousel-navigation">
+        {navigationDots(carouselIndex, setCarouselIndex)}
+      </span>
     </div>
   );
 };

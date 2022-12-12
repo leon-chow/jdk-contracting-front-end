@@ -9,8 +9,19 @@ const Body = () => {
     <div className="body">
       <Hero />
       <About />
+      <div className="section-header">
+        Below, you can find some of our best work!
+      </div>
       <ImageCarousel />
-      <ImageGallery />
+      <div className="section-header">
+        Check out our renovations galleries below!
+      </div>
+      <div className="gallery-container">
+        <ImageGallery className="gallery" />
+        <ImageGallery className="gallery" />
+        <ImageGallery className="gallery" />
+        <ImageGallery className="gallery" />
+      </div>
     </div>
   );
 };
