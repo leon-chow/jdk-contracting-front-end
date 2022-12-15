@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./imagecarousel.css";
 import image1 from "../../../assets/KITCHEN_1.jpg";
 import image2 from "../../../assets/KITCHEN_2.jpg";
@@ -8,6 +8,8 @@ import image5 from "../../../assets/BATHROOM_1.jpg";
 import image6 from "../../../assets/BATHROOM_2.jpg";
 
 const images = [image1, image2, image3, image4, image5, image6];
+const darkGray = "#717171";
+const gray = "#bbb";
 
 const CarouselComponents = (carouselIndex) =>
   images.map((image) => {
@@ -29,7 +31,7 @@ const navigationDots = (carouselIndex, setCarouselIndex) =>
         key={image}
         className="dot"
         style={{
-          backgroundColor: carouselIndex === index ? "#717171" : "#bbb",
+          backgroundColor: carouselIndex === index ? darkGray : gray,
         }}
         onClick={() => setCarouselIndex(index)}
       />
@@ -38,6 +40,14 @@ const navigationDots = (carouselIndex, setCarouselIndex) =>
 
 const ImageCarousel = () => {
   const [carouselIndex, setCarouselIndex] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCarouselIndex((prevState) =>
+        prevState === images.length - 1 ? 0 : (prevState += 1)
+      );
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div className="carousel-container">
       <div className="image-carousel">
