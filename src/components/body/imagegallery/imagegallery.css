@@ -3,8 +3,10 @@
 }
 
 .gallery-image {
-    width: 400px;
+    max-width: 400px;
     height: 400px;
+    align-items: center;
+    justify-content: center;
     opacity: 1;
     display: block;
     transition: .5 ease;
