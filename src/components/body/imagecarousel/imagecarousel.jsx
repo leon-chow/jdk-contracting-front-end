@@ -58,10 +58,10 @@ const ImageCarousel = () => {
               prevState === 0 ? images.length - 1 : (prevState -= 1)
             )
           }
-          className="arrow left"
+          className="arrow arrow-left"
         ></span>
         <span
-          className="arrow right"
+          className="arrow arrow-right"
           onClick={() =>
             setCarouselIndex((prevState) =>
               prevState === images.length - 1 ? 0 : (prevState += 1)

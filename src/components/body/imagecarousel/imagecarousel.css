@@ -15,6 +15,17 @@
     margin: 10px;
 }
 
+@media only screen and (max-width: 1024px) {
+    .arrow-right {
+        right: 1%;
+    }
+    
+    .image-carousel {
+        max-width: 100%;
+    }
+}
+
+
 .carousel-item {
     white-space: nowrap;
     position: relative;
@@ -37,13 +48,18 @@
     margin: 0 10px;
 }
 
-.right {
+.arrow-right {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
-    right: 25%;
 }
 
-.left {
+@media only screen and (min-width: 1025px) {
+    .arrow-right {
+        right: 25%;
+    }
+}
+
+.arrow-left {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
 }

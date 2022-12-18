@@ -3,7 +3,7 @@ import Hero from "./hero/hero";
 import About from "./about/about";
 import ImageCarousel from "./imagecarousel/imagecarousel";
 import ImageGallery from "./imagegallery/imagegallery";
-import ContactForm from "./contactform/contactform";
+import Contact from "./contactform/contact";
 
 import kitchen from "../../assets/KITCHEN_1.jpg";
 import bathroom from "../../assets/BATHROOM_1.jpg";
@@ -42,7 +42,7 @@ const Body = () => {
           galleryText={"FLOORING RENOVATIONS"}
         />
       </div>
-      <ContactForm />
+      <Contact />
     </div>
   );
 };

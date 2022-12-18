@@ -7,10 +7,14 @@
 
 .content {
     margin: 10px;
-    width: 50%;
+    width: 75%;
     font-size: 16px;
 }
 
 h1 {
     margin: 10px;
+}
+
+p {
+    font-size: 24px;
 }
