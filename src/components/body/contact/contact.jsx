@@ -21,6 +21,19 @@ const Contact = () => {
         After consulting our quotes and choosing our rates, we will charge half
         upfront and collect the rest when it's a job well done!
       </p>
+      <h3> How long do our renovations usually take? </h3>
+      <p className="faq-text">
+        It varies on your desired renovation and on the footage of products
+        being removed and installed. For average renovation timeline
+        estimations, our bathrooms usually take 8 - 10 days, kitchen 3 - 5 days
+        and backsplash 2 - 3 days. For flooring, we cannot give an approximate
+        estimation since our client's needs may vary.
+      </p>
+      <h3> When can you begin my desired renovation? </h3>
+      <p className="faq-text">
+        Our team will be able to start your desired renovation after 1 week of
+        confirming every part of the project.
+      </p>
       <h1 className="form-header">Contact Us!</h1>
       <a className="email-link" href="mailto:joshuakotsopoulos1@gmail.com">
         Email me at JDK Contracting
