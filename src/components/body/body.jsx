@@ -5,9 +5,28 @@ import ImageCarousel from "./imagecarousel/imagecarousel";
 import ImageGallery from "./imagegallery/imagegallery";
 import Contact from "./contact/contact";
 
-import kitchen from "../../assets/KITCHEN_1.jpg";
-import bathroom from "../../assets/BATHROOM_1.jpg";
-import backsplash from "../../assets/BACKSPLASH_1.jpg";
+import kitchen1 from "../../assets/KITCHEN_1.jpg";
+import kitchen2 from "../../assets/KITCHEN_2.jpg";
+import kitchen3 from "../../assets/KITCHEN_3.jpg";
+import kitchen4 from "../../assets/KITCHEN_4.jpg";
+import bathroom1 from "../../assets/BATHROOM_1.jpg";
+import bathroom2 from "../../assets/BATHROOM_2.jpg";
+import backsplash1 from "../../assets/BACKSPLASH_1.jpg";
+import backsplash2 from "../../assets/BACKSPLASH_2.jpg";
+import backsplash3 from "../../assets/BACKSPLASH_3.jpg";
+
+const carouselImages = [
+  kitchen1,
+  kitchen2,
+  kitchen3,
+  kitchen4,
+  bathroom1,
+  bathroom2,
+];
+
+const kitchenImages = [kitchen1, kitchen2, kitchen3, kitchen4];
+const bathroomImages = [bathroom1, bathroom2];
+const backsplashImages = [backsplash1, backsplash2, backsplash3];
 
 const Body = () => {
   return (
@@ -17,29 +36,32 @@ const Body = () => {
       <div className="section-header">
         Below, you can find some of our best work!
       </div>
-      <ImageCarousel />
+      <ImageCarousel images={carouselImages} />
       <div className="section-header">
         Check out our renovations galleries below!
       </div>
       <div className="gallery-container">
         <ImageGallery
           className="gallery"
-          galleryImage={kitchen}
+          galleryImage={kitchen1}
           galleryText={"KITCHEN RENOVATIONS"}
+          imageList={kitchenImages}
         />
         <ImageGallery
           className="gallery"
-          galleryImage={bathroom}
+          galleryImage={bathroom1}
           galleryText={"BATHROOM RENOVATIONS"}
+          imageList={bathroomImages}
         />
         <ImageGallery
           className="gallery"
-          galleryImage={backsplash}
+          galleryImage={backsplash1}
           galleryText={"BACKSPLASH RENOVATIONS"}
+          imageList={backsplashImages}
         />
         <ImageGallery
           className="gallery"
-          galleryImage={bathroom}
+          galleryImage={bathroom1}
           galleryText={"FLOORING RENOVATIONS"}
         />
       </div>

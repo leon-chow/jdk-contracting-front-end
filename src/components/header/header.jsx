@@ -8,11 +8,11 @@ const Header = () => {
   return (
     <div className="header">
       <div className="header-text"> JDK Contracting </div>
-      <div className="menu">
+      {/* <div className="menu">
         <MenuIcon
           onClick={() => setDisplayMenuState((prevState) => !prevState)}
         />
-      </div>
+      </div> */}
     </div>
   );
 };
