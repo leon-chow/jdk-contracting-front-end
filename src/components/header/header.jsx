@@ -12,7 +12,6 @@ const Header = () => {
         <MenuIcon
           onClick={() => setDisplayMenuState((prevState) => !prevState)}
         />
-        {displayMenu ? <div> displaying menu </div> : <> </>}
       </div>
     </div>
   );

@@ -4,3 +4,7 @@
     display: block;
     font-style: italic;
 }
+
+.faq-text {
+    padding: 10px;
+}
