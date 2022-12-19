@@ -1,9 +1,9 @@
 import "./header.css";
-import MenuIcon from "@mui/icons-material/Menu";
-import { useState } from "react";
+// import MenuIcon from "@mui/icons-material/Menu";
+// import { useState } from "react";
 
 const Header = () => {
-  const [displayMenu, setDisplayMenuState] = useState(false);
+  // const [displayMenu, setDisplayMenuState] = useState(false);
 
   return (
     <div className="header">

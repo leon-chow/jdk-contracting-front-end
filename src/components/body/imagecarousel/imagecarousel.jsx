@@ -40,7 +40,7 @@ const ImageCarousel = (props) => {
       );
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, [props.images.length]);
   return (
     <div className="carousel-container">
       <div className="image-carousel">

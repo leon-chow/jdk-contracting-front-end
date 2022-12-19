@@ -1,10 +1,9 @@
 import "./imagegallery.css";
-import CarouselComponents from "../imagecarousel/imagecarousel";
+import ImageCarousel from "../imagecarousel/imagecarousel";
 import { useState } from "react";
 
 const ImageGallery = (props) => {
   const [displayImageGallery, setDisplayImageGallery] = useState(false);
-  const [carouselIndex, setCarouselIndex] = useState(0);
   return (
     <div className="gallery">
       <div className="overlay">
@@ -16,9 +15,19 @@ const ImageGallery = (props) => {
         src={props.galleryImage}
         onClick={() => setDisplayImageGallery((prevState) => !prevState)}
       />
-      {displayImageGallery ? (
+      {displayImageGallery && props.imageList ? (
         <div className="gallery-modal">
-          <div className="gallery-modal-content"></div>
+          <span
+            className="close-button"
+            onClick={() =>
+              setDisplayImageGallery((prevState) => (prevState = false))
+            }
+          >
+            X
+          </span>
+          <div className="gallery-modal-content">
+            <ImageCarousel images={props.imageList} />
+          </div>
         </div>
       ) : null}
     </div>
