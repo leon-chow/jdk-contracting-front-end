@@ -7,6 +7,7 @@ import Contact from "./contact/contact";
 
 import kitchen from "../../assets/KITCHEN_1.jpg";
 import bathroom from "../../assets/BATHROOM_1.jpg";
+import backsplash from "../../assets/BACKSPLASH_1.jpg";
 
 const Body = () => {
   return (
@@ -33,7 +34,7 @@ const Body = () => {
         />
         <ImageGallery
           className="gallery"
-          galleryImage={kitchen}
+          galleryImage={backsplash}
           galleryText={"BACKSPLASH RENOVATIONS"}
         />
         <ImageGallery
