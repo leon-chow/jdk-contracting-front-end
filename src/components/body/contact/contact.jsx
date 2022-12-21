@@ -37,9 +37,12 @@ const Contact = () => {
         </p>
       </div>
       <h1 className="form-header">Contact Us!</h1>
-      <a className="email-link" href="mailto:joshuakotsopoulos1@gmail.com">
-        Email me at JDK Contracting
-      </a>
+      <div className="contact-text">
+        Reach us at
+        <a className="email-link" href="mailto:joshuakotsopoulos1@gmail.com">
+          &nbsp;joshuakotsopoulos1@gmail.com
+        </a>
+      </div>
     </div>
   );
 };
