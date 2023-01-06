@@ -31,7 +31,7 @@ const ImageGallery = (props) => {
   const galleryRef = useRef(null);
   useBlurOnGallery(galleryRef, displayImageGallery, setDisplayImageGallery);
   return (
-    <div className="gallery" ref={galleryRef}>
+    <div className="gallery">
       <div className="overlay">
         <div className="gallery-text"> {props.galleryText} </div>
       </div>
@@ -60,7 +60,7 @@ const ImageGallery = (props) => {
             X
           </span>
           <div className="gallery-modal-content">
-            <div className="gallery-modal-container">
+            <div className="gallery-modal-container" ref={galleryRef}>
               {CarouselComponents(carouselIndex, props.imageList)}
               <span
                 onClick={() =>
