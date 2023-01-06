@@ -27,6 +27,7 @@ const carouselImages = [
 const kitchenImages = [kitchen1, kitchen2, kitchen3, kitchen4];
 const bathroomImages = [bathroom1, bathroom2];
 const backsplashImages = [backsplash1, backsplash2, backsplash3];
+const flooringImages = [bathroom1, kitchen1, kitchen2];
 
 const Body = () => {
   return (
@@ -63,6 +64,7 @@ const Body = () => {
           className="gallery"
           galleryImage={bathroom1}
           galleryText={"FLOORING RENOVATIONS"}
+          imageList={flooringImages}
         />
       </div>
       <Contact />

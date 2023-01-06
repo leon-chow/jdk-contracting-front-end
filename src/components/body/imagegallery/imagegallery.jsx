@@ -1,13 +1,37 @@
 import "./imagegallery.css";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import { CarouselComponents } from "../imagecarousel/imagecarousel";
+
+const useBlurOnGallery = (ref, shouldBlurGallery, setDisplayImageGallery) => {
+  useEffect(() => {
+    function clickedOutside(event) {
+      if (
+        ref.current &&
+        !ref.current.contains(event.target) &&
+        shouldBlurGallery
+      ) {
+        setDisplayImageGallery(
+          (prevState) => (prevState = false),
+          (document.body.style.overflow = "auto"),
+          (document.body.style.filter = "none")
+        );
+      }
+    }
+    document.addEventListener("mousedown", clickedOutside);
+    return () => {
+      document.removeEventListener("mousedown", clickedOutside);
+    };
+  }, [ref, shouldBlurGallery, setDisplayImageGallery]);
+};
 
 const ImageGallery = (props) => {
   const [displayImageGallery, setDisplayImageGallery] = useState(false);
   const [carouselIndex, setCarouselIndex] = useState(0);
+  const galleryRef = useRef(null);
+  useBlurOnGallery(galleryRef, displayImageGallery, setDisplayImageGallery);
   return (
-    <div className="gallery">
+    <div className="gallery" ref={galleryRef}>
       <div className="overlay">
         <div className="gallery-text"> {props.galleryText} </div>
       </div>
@@ -22,7 +46,6 @@ const ImageGallery = (props) => {
           )
         }
       />
-      {/* TODO: Fix vertical overflow for galleries and increase carousel size of galleries */}
       {displayImageGallery && props.imageList ? (
         <div className="gallery-modal">
           <span
