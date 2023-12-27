@@ -40,8 +40,9 @@ const Contact = () => {
       <div className="contact-text">
         Reach us at
         <a className="email-link" href="mailto:joshuakotsopoulos1@gmail.com">
-          &nbsp;joshuakotsopoulos1@gmail.com
+          &nbsp;stevekotsopoulos083@gmail.com&nbsp;
         </a>
+        or call us at 416-888-1476
       </div>
     </div>
   );
